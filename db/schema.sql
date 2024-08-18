@@ -11,7 +11,7 @@ CREATE TABLE department {
 CREATE TABLE role {
     id SERIAL PRIMARY KEY,
     title VARCHAR(30),
-    salary DECIMAL,
+    salary INTEGER,
     department INTEGER
 };
 
