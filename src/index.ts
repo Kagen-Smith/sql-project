@@ -16,7 +16,6 @@ import {
     viewCombinedSalaries 
 } from './queries';
 
-
 const mainMenu = async () => {
     let exit = false;
 
@@ -70,7 +69,6 @@ const mainMenu = async () => {
             console.log('Department deleted');
             break;
 
-
         case 'View All Roles':
             const roles = await viewAllRoles();
             console.table(roles);
@@ -116,7 +114,6 @@ const mainMenu = async () => {
             console.log('Role deleted');
             break;
 
-    
         case 'View All Employees':
             const employees = await viewAllEmployees();
             console.table(employees);
@@ -215,6 +212,7 @@ const mainMenu = async () => {
             await updateEmployeeManager(parseInt(updateEmpIdManager), newManagerId ? parseInt(newManagerId) : null);
             console.log('Employee manager updated');
             break;
+
         case 'View Employees By Manager':
             const { managerIdToView } = await inquirer.prompt({
                 type: 'input',
@@ -235,7 +233,6 @@ const mainMenu = async () => {
             console.table(employeesByDepartment);
             break;
 
-
         case 'Delete Employee':
             const { deleteEmpId } = await inquirer.prompt({
                 type: 'input',
@@ -246,7 +243,6 @@ const mainMenu = async () => {
             console.log('Employee deleted');
             break;
 
-
         case 'View Combined Salaries':
             const combinedSalaries = await viewCombinedSalaries();
             console.table(combinedSalaries);
@@ -256,7 +252,6 @@ const mainMenu = async () => {
             console.log('Goodbye!');
             process.exit();
             break;
-
 
         default:
             console.log('Invalid option');

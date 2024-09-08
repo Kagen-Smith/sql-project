@@ -1,4 +1,3 @@
-
 import { pool } from './connection';
 
 export const viewAllDepartments = async () => {
@@ -44,7 +43,6 @@ export const addRole = async (title: string, salary: number, department_id: numb
 export const deleteRole = async (id: number) => {
     await pool.query('DELETE FROM role WHERE id = $1', [id]);
 };
-
 
 export const viewAllEmployees = async () => {
     const result = await pool.query(`
