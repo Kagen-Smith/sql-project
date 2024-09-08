@@ -1,1 +1,2 @@
-Import
+import inquirer from 'inquirer';
+
